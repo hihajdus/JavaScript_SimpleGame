@@ -2,7 +2,7 @@
 
 Celem tego ćwiczenia jest napisanie prostej gry w Javascript. W trakcie pracy nad tym zadaniem poznasz technikę programowania obiektowego i dowiesz się, dlaczego używanie obiektów, ich metod i właściwości ma sens. :-)
 
-Bohaterem naszej gry jest **Furry**, który porusza się po planszy o rozmiarach 10x10 pól. 
+Bohaterem naszej gry jest **Furry**, który porusza się po planszy o rozmiarach 10x10 pól.
 
 Na losowym polu planszy znajduje się moneta. Gracz sterując Furrym przy pomocy strzałek na klawiaturze musi dojść do monety. Gdy to zrobi, moneta znika z planszy i pojawia się na innym polu, również losowym, a gracz dostaje 1 punkt.
 
@@ -14,7 +14,7 @@ Tutaj możesz obejrzeć przykładowe rozwiązanie: https://marcin-barylka.github
 
 ## 1. Budowanie planszy
 
-* Zajrzyj do pliku `index.html`. Znajdziesz w nim mnóstwo pustych elementów `<div>`. Jest ich dokładnie 100. Będą to pola kwadratowej planszy o wymiarach 10x10 pól. 
+* Zajrzyj do pliku `index.html`. Znajdziesz w nim mnóstwo pustych elementów `<div>`. Jest ich dokładnie 100. Będą to pola kwadratowej planszy o wymiarach 10x10 pól.
 * Zajrzyj do pliku `style.css`, znajdującego się w katalogu `css`. Znajdziesz tam prototyp pliku ze stylami do naszej gry. Podepnij plik CSS do dokumentu HTML.
 * W pliku `index.html`, wszystkie elementy `<div>` umieść w elemencie `<section>` tak, aby jeden element `<section>` zawierał wszystkie 100 elementów `<div>`. Nadaj sekcji identyfikator `#board`.
 * Nadaj elementom `<div>` znajdującym się wewnątrz elementu o identyfikatorze `#board` następujące właściwości:
@@ -67,7 +67,7 @@ Musimy stworzyć klasy opisujące Furry'ego i monetę. W tym celu w pliku `app.j
 podpowiedź:
 ```javascript
 Math.floor(Math.random() * 10);
-``` 
+```
 **Pamiętaj o odpowiednim użyciu słowa kluczowego `this` wewnątrz obiektów!**
 
 ## 5. Przygotowanie obiektu zarządzającego grą.
@@ -95,7 +95,7 @@ indeks = x + y * 10;
 
 Skoro mamy już zdefiniowane elementy gry (Furry i moneta) i umieściliśmy je w grze (właściwości `furry` i `coin` w obieckie `Game()`), powinniśmy zaprogramować pokazanie ich na odpowiednich polach planszy.
 
-Aby pokazać Furry'ego, wystarczy elementowi `<div>` planszy, odpowiadającemu pozycji X i Y Furry'ego, nadać klasę `.furry`. Podobnie należy zrobić z monetą. 
+Aby pokazać Furry'ego, wystarczy elementowi `<div>` planszy, odpowiadającemu pozycji X i Y Furry'ego, nadać klasę `.furry`. Podobnie należy zrobić z monetą.
 
 Napisz metodę w klasie `Game()`, która to zrobi. Wykorzystaj metodę przeliczającą pozycję, którą napisałeś w poprzednim punkcie.
 
@@ -148,7 +148,7 @@ Napisz metodę, która sprawdzi pozycję obu elementów. Jeśli kolizja nastąpi
 * usunąć monetę z ekranu (nie z obiektu gry),
 * dodać 1 do wyniku,
 * pamiętać o pokazaniu wyniku na ekranie, w tym celu stwórz gdzieś na ekranie `<div>` lub inny element, który będzie pokazywał aktualny wynik,
-* utworzyć nową monetę (dzięki temu, że zadbaliśmy o to przy pisaniu konstruktora, nowa moneta będzie miała losowo wybraną pozycję X i Y). 
+* utworzyć nową monetę (dzięki temu, że zadbaliśmy o to przy pisaniu konstruktora, nowa moneta będzie miała losowo wybraną pozycję X i Y).
 
 **Pamiętaj o tym, że moneta, to tak naprawdę właściwość `coin` w obiekcie `Game()`.**
 
@@ -174,7 +174,7 @@ Uruchom w konsoli tę funkcję kilka razy. Zmień w międzyczasie właściwość
 
 ## 13. Let's go!
 
-W poprzednim punkcie wykonywałeś każdy krok gry ręcznie, wywołując odpowiednią metodę. Nie ma to większego sensu, prawda? Musisz, zatem, uruchomić interwał, który co pewną liczbę milisekund wywoła pojedynczy krok gry. 
+W poprzednim punkcie wykonywałeś każdy krok gry ręcznie, wywołując odpowiednią metodę. Nie ma to większego sensu, prawda? Musisz, zatem, uruchomić interwał, który co pewną liczbę milisekund wywoła pojedynczy krok gry.
 
 **UWAGA:**
 *Pamiętaj o tym, że  interwał, podobnie jak event, przejmuje kontrolę nad słowem kluczowym `this`. Musisz wykorzystać zmienną `self`, którą zdefiniowałeś przy okazji obsługi klawiatury*
@@ -187,7 +187,7 @@ Wróć teraz do momentu sprawdzania kolizji ze ścianą. Wewnątrz funkcji `if` 
 * usunąć obsługę eventu klawiatury (dlatego zrobiliśmy go używając metody, nie anonimowego wyrażenia funkcyjnego),
 * pokazać napis **GAME OVER** (Twojej inwencji zostawiamy jak go zrobić).
 
-## 15. Ostatnie poprawki. 
+## 15. Ostatnie poprawki.
 
 Nie zapomnij napisać komendy uruchamiającej grę. :) Jeśli napisałeś wszystko zgodnie z naszą instrukcją, wewnątrz zdarzenia `DOMContentLoaded` powinieneś utworzyć instancję obiektu `Game()`, żeby uruchomić grę.
 
