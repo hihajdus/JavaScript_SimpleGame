@@ -123,6 +123,13 @@ Aby oszczędzić Wam żmudnego szukania odpowiednich wartości dla klawiszy strz
 * **39**: góra,
 * **40**: dół.
 
+* **97**: a,
+* **100**: d,
+* **119**: w,
+* **115**: s,
+
+
+
 Zmodyfikuj kierunek poruszania się Furry'ego, zależnie od wciśniętego klawisza. Użyj do tego właściwości `direction` w obiekcie `Furry()`, której nadaj odpowiednią wartość: `"up"`, `"down"`, `"left"`, `"right"`.
 
 Wystartuj obsługę klawiszy (napisz obsługę odpowiedniego zdarzenia, a jako funkcję callback użyj metody, którą napisałeś).
